@@ -10,7 +10,7 @@
 namespace Övning_2 {
     
     
-    public partial class main {
+    public partial class _Main {
         
         /// <summary>
         /// form1 control.
@@ -22,6 +22,24 @@ namespace Övning_2 {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
+        /// ThePanel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel ThePanel;
+        
+        /// <summary>
+        /// Label1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label1;
+        
+        /// <summary>
         /// TheBox control.
         /// </summary>
         /// <remarks>
@@ -31,12 +49,21 @@ namespace Övning_2 {
         protected global::System.Web.UI.WebControls.TextBox TheBox;
         
         /// <summary>
-        /// ThePanel control.
+        /// Knappen control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel ThePanel;
+        protected global::System.Web.UI.WebControls.Button Knappen;
+        
+        /// <summary>
+        /// TextBox2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBox2;
     }
 }
