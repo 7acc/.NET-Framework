@@ -23,11 +23,18 @@ namespace övning_2._1
             string Stenmark = StenmarkIt(original);
 
             string complete = original + " - " + Stenmark;
-            TextBox2.Text = TextBox2.Text + complete +"\r";
+            TextBox2.Text = TextBox2.Text + complete + "\r";
 
             TheBox.Text = string.Empty;
         }
-        
+        public void Convert_button_Click(object sender, EventArgs e)
+        {
+            double dollars = double.Parse(DropDownList_From.SelectedValue) * double.Parse(Amount_TextBox.Text);
+            double converted = double.Parse(DropDownList_To.SelectedValue) * dollars;
+
+            Converted_textbox.Text = converted.ToString();
+        }
+
         public string StenmarkIt(string text)
         {
             var vokaler = new char[] { 'a', 'o', 'u', 'å', 'e', 'i', 'y', 'ä', 'ö' };
@@ -40,6 +47,18 @@ namespace övning_2._1
             return stenmark;
         }
 
-    
+        protected void Change_Button_Click(object sender, EventArgs e)
+        {
+            if (ThePanel.Visible == false)
+            {
+                ThePanel.Visible = true;
+                Panel2.Visible = false;
+            }
+            else
+            {
+                ThePanel.Visible = false;
+                Panel2.Visible = true;
+            }
+        }
     }
 }
