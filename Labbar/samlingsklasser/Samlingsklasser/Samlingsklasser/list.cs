@@ -38,7 +38,7 @@ namespace Samlingsklasser
             foreach (var item in intlist)
 
             {
-                Console.WriteLine(item.ToString());
+                Console.WriteLine(item);
             }
 
 
@@ -47,16 +47,18 @@ namespace Samlingsklasser
 
             foreach (var item in intlist)
             {
-                Console.WriteLine(item.ToString());
+                Console.WriteLine(item);
             }
+
 
             intlist.RemoveAt(3);
 
             Console.WriteLine("element at index \"3\" removed");
             foreach (var item in intlist)
             {
-                Console.WriteLine(item.ToString());
+                Console.WriteLine(item);
             }
+            intlist.Sort();
             Console.ReadKey();
         }
     }

@@ -11,9 +11,11 @@ namespace Samlingsklasser
 
         static void Main(string[] args)
         {
-            list.Run();
-            Dicti.Run();
-            Dice.Run();
+            //list.Run();
+            //Dicti.Run();
+            //Dice.Run();
+            //Queue.Run();
+            BruteForceSearch.Run();
         }
 
 
