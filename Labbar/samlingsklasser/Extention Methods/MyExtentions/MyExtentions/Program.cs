@@ -12,7 +12,7 @@ namespace MyExtentions
         {
             List<Person> personListan = new List<Person>();
 
-            Person p1 = new Person() { FirstName = "Allan" }; 
+            Person p1 = new Person() { FirstName = "Allan" };
             Person p2 = new Person() { FirstName = "Ballan" };
             Person p3 = new Person() { FirstName = "Kalle" };
             Person p4 = new Person() { FirstName = "Piere" };
@@ -25,7 +25,9 @@ namespace MyExtentions
             personListan.Add(p5);
 
 
-           Person found = personListan.FindPersonInList("Kalle");
+            Person found = personListan.FindPersonInList("Kalle");
+            found.NewAdress("Stureplan");
+            found.NewLastName("Rövare");
             Console.WriteLine(found);
             Console.ReadKey();
 
