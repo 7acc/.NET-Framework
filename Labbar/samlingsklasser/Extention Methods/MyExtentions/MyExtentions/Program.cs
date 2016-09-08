@@ -18,16 +18,18 @@ namespace MyExtentions
             Person p4 = new Person() { FirstName = "Piere" };
             Person p5 = new Person() { FirstName = "Sturtgarden" };
 
-            personListan.Add(p1);
-            personListan.Add(p2);
-            personListan.Add(p3);
-            personListan.Add(p4);
-            personListan.Add(p5);
+
+            personListan.objToList(p1, p2, p3, p4, p5);
+            personListan.PrintPersons();
+            Console.Read();
 
 
            Person found = personListan.FindPersonInList("Kalle");
             Console.WriteLine(found);
             Console.ReadKey();
+
+
+            
 
         }
     }
