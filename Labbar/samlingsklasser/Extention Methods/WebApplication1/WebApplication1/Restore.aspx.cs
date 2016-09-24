@@ -12,7 +12,7 @@ namespace WebApplication1
         private static bool Restored = false;
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            SessionLBL.Text = Session["user"].ToString();
         }
 
         protected void Button2_Click(object sender, EventArgs e)

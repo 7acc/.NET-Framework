@@ -28,7 +28,7 @@
                     <asp:TextBox ID="T1" runat="server" Style="margin-left: 110px;"></asp:TextBox><br />
                 </div>
                 <div style="margin-top: 5px;">
-                    <asp:Label ID="Label2" runat="server" Text="Number" Style="position: absolute; font-size: 15px; font-weight: bold;"></asp:Label>
+                    <asp:Label ID="Label2" runat="server" Text="Password" Style="position: absolute; font-size: 15px; font-weight: bold;"></asp:Label>
                     <asp:TextBox ID="T2" runat="server" Style="margin-left: 110px;"></asp:TextBox>
                 </div>
             </div>
@@ -42,7 +42,9 @@
                 <asp:Button ID="Button1" Text="Save" runat="server" />
                 <asp:Button ID="Button3" Text="Next Page" OnClick="Button2_Click" runat="server" Style="margin-left: 10px;" />
             </div>
-            <div class="col-md-4 ">
+            <div class="col-md-4" style="align-items:center">
+              
+                <label id="SessionLBL" runat="server"></label>
             </div>
 
 

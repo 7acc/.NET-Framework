@@ -147,6 +147,7 @@
     <Compile Include="LocalList.aspx.designer.cs">
       <DependentUpon>LocalList.aspx</DependentUpon>
     </Compile>
+    <Compile Include="PasswordHash.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Receipt.aspx.cs">
       <DependentUpon>Receipt.aspx</DependentUpon>

@@ -1,0 +1,263 @@
+﻿
+/* Vertical Spacing */
+.voffset5 {margin-top: 5px;}
+.voffset10 {margin-top: 10px;}
+.voffset20 {margin-top: 20px;}
+.voffset30 {margin-top: 30px;}
+.voffset40 {margin-top: 40px;}
+.voffset50 {margin-top: 50px;}
+.voffset60 {margin-top: 60px;}
+.voffset70 {margin-top: 70px;}
+.voffset80 {margin-top: 80px;}
+.voffset90 {margin-top: 90px;}
+.voffset100 {margin-top: 100px;}
+.voffset110 {margin-top: 110px;}
+.voffset120 {margin-top: 120px;}
+.voffset130 {margin-top: 130px;}
+.voffset140 {margin-top: 140px;}
+.voffset150 {margin-top: 150px;}
+
+/* ---------------------------------------------------------------------------------- */
+/* HEADER SECTION */
+.search-bar {
+    margin-right: 180px;
+}
+
+/* ---------------------------------------------------------------------------------- */
+/* CAROUSEL SECTION */
+.carousel-inner > .item > img {
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* ---------------------------------------------------------------------------------- */
+/* CONTENT SECTION */
+#kunderna-box {
+    background-color: #f8f8f8;
+    border-top: 1px solid #e3e3e3;
+}
+
+/* ---------------------------------------------------------------------------------- */
+.hr-sect {
+	display: flex;
+	flex-basis: 100%;
+	align-items: center;
+	color: rgba(0, 0, 0, 0.35);
+	margin: 8px 0px;
+}
+.hr-sect::before,
+.hr-sect::after {
+	content: "";
+	flex-grow: 1;
+	/*background: rgba(0, 0, 0, 0.35);*/
+	height: 1px;
+    border: double;
+	font-size: 0px;
+	line-height: 0px;
+	margin: 0px 16px;
+}
+
+/* ---------------------------------------------------------------------------------- */
+.filters {
+    padding: 5px 15px;
+    text-align: center;
+}
+
+.filters .filter {
+    display: inline-block;
+    border-right: 1px solid #e3e3e3;
+    padding: 0 1em;
+}
+
+.filters .filter:last-of-type {
+    border-right: none;
+}
+
+.filters .filter ul {
+    margin-top: 0.5em;
+}
+
+.filters .filter ul li, .filters .sorting ul li {
+    display: inline-block;
+}
+
+.filters .filter.icon ul li a {
+    border-radius: 20px;
+    display: inline-block;
+    margin-right: 0;
+    width: 40px;
+    height: 40px;
+    text-decoration: none;
+    font-weight: 700;
+    text-align: center;
+}
+
+.filters .filter.color ul li .value {
+    display: none;
+}
+
+.filters .filter.icon ul li a > span {
+    display: inline-block;
+    margin-top: 8px;
+}
+
+/* ---------------------------------------------------------------------------------- */
+.filters .filter.color ul li.white a {
+    background-color: white;
+    color: black;
+    border: 1px solid #e3e3e3;
+}
+
+.filters .filter.color ul li.green a {
+    background-color: #295731;
+    color: white;
+}
+
+.filters .filter.color ul li.blue a {
+    background-color: #384c75;
+    color: white;
+}
+
+.filters .filter.color ul li.black a {
+    background-color: black;
+    color: white;
+}
+
+.filters .filter.color ul li.red a {
+    background-color: #8c241f;
+    color: white;
+}
+
+.filters .filter.color ul li.gray a {
+    background-color: #555;
+    color: white;
+}
+
+.filters .filter.color ul li.orange a {
+    background-color: #e4783f;
+    color: black;
+}
+
+.filters .filter.color ul li.purple a {
+    background-color: #443050;
+    color: white;
+}
+
+.filters .filter.color ul li.pink a {
+    background-color: #e9aacb;
+    color: white;
+}
+
+.filters .filter.color ul li.brown a {
+    background-color: #534033;
+    color: white;
+}
+
+/* ---------------------------------------------------------------------------------- */
+    .filters .filter.pattern ul li.solid a {
+        background-image: url('../Images/solid.jpg');
+        background-size: 40px 40px;
+    }
+
+    .filters .filter.pattern ul li.striped a {
+        background-image: url('../Images/striped.jpg');
+        background-size: 40px 40px;
+    }
+
+    .filters .filter.pattern ul li.checked a {
+        background-image: url('../Images/checked.jpg');
+        background-size: 40px 40px;
+    }
+
+    .filters .filter.pattern ul li.dotted a {
+        background-image: url('../Images/dotted.jpg');
+        background-size: 40px 40px;
+    }
+
+    .filters .filter.pattern ul li.printed a {
+        background-image: url('../Images/printed.jpg');
+        background-size: 40px 40px;
+    }
+
+/* ---------------------------------------------------------------------------------- */
+/* FOOTER SECTION */
+footer h4 {
+    border-bottom: 2px dotted #ababab;
+}
+
+.checkout_partners {
+    text-align: center;
+}
+
+    .checkout_partners span {
+        background-image: url('../Images/Partners.png');
+        display: inline-block;
+        margin: 7px 3px;
+        height: 23px;
+        width: 38px;
+    }
+
+    .checkout_partners .visa {
+        background-position: 0 -6px;
+    }
+
+    .checkout_partners .mastercard {
+        background-position: -39px -6px;
+    }
+
+    .checkout_partners .paypal {
+        background-position: -78px -6px;
+    }
+
+    .checkout_partners .klarna {
+        background-position: -117px -6px;
+        width: 64px;
+    }
+
+    .checkout_partners .nordea {
+        background-position: -185px -6px;
+        width: 83px;
+    }
+
+    .checkout_partners .handelsbanken {
+        background-position: -271px -6px;
+        width: 104px;
+    }
+
+    .checkout_partners .swedbank {
+        background-position: -377px -6px;
+        width: 90px;
+    }
+
+    .checkout_partners .seb {
+        background-position: -468px -6px;
+        width: 42px;
+    }
+
+    .checkout_partners .bankgirot {
+        background-position: -512px -6px;
+        width: 84px;
+    }
+
+    .checkout_partners .divider {
+        width: 1px;
+        background: #e3e3e3;
+        height: 37px;
+        margin: 0 10px;
+    }
+
+.m1t {
+    margin-top: 1em;
+}
+
+.c-24 {
+    position: relative;
+    float: left;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#Tailor-Store-paragraf {
+    font-size: 9px;
+}

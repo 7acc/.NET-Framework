@@ -14,34 +14,10 @@ namespace DBTest
         protected void Page_Load(object sender, EventArgs e)
         {
             DBconnect DB = new DBconnect();
+            PrintProducts(DB);
 
-            DataTable data  = DB.GetProductsByCategory();
-
-            //foreach (var item in data.Rows)
-            //{
-            //    Image img = new Image();
-            //    img.ImageUrl = item.ToString();
-            //    Page.Controls.Add(img);
-            //}
-            for (int i = 0; i < data.Rows.Count; i++)
-            {
-                Image img = new Image();
-                Label lbl = new Label();
-                img.Attributes["runat"] = "server";
-                byte[] bytes = (byte[])data.Rows[i]["ProductIMG"];
-                string base64String = Convert.ToBase64String(bytes, 0, bytes.Length);
-
-                img.ImageUrl = "data:image/jpg;base64," + base64String;
-
-
-                lbl.Text = data.Rows[i]["Name"].ToString();
-
-                img.Height = 100;            
-                Page.Controls.Add(img);
-                Page.Controls.Add(lbl);
-
-            }
-
+           
+           
         }
     }
 }

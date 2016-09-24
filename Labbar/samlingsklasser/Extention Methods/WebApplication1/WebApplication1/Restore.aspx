@@ -41,7 +41,8 @@
                 <div class="col-md-4 ">
                     <asp:Button ID="Button2" Text="restore" runat="server" OnClick="Button2_Click" />
                 </div>
-                <div class="col-md-4 "></div>
+             <div class="col-md-4" style="align-items:center">
+                <asp:label id="SessionLBL" runat="server" Text="" ></asp:label>
             </div>
 
 
