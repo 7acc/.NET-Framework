@@ -14,6 +14,7 @@
     <link href="content/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="Content/font-awesome.min.css" />
     <link rel="stylesheet" href="Content/custom.css" />
+       <link href="Content/ProductContainer.css" rel="stylesheet" />
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -63,7 +64,7 @@
                     <!-- Nav Left Start -->
                     <div class="navbar-collapse collapse">
                         <ul class="nav navbar-nav navbar-left">
-                            <li><a href="skjortor.aspx">Skjortor</a></li>
+                            <li><asp:linkbutton ID="cat5" runat="server" OnClick="Category_onclick" Text="Skjortor"></asp:linkbutton></li>
                             <li><a href="#">Kostymer</a></li>
                             <li><a href="#">Skor</a></li>
                         </ul>
@@ -95,9 +96,9 @@
             <div class="row">
                 <div class="col-xs-6">
                     <div class="content-heading clearfix media">
-                        <h4>Om Tailor Store</h4>
+                        <h4>Om Jaccs fancy and dandy clothes</h4>
                         <img class="pull-left" src="Images/Textile.png" alt="" />
-                        <p id="Tailor-Store-paragraf">Tailor Store International (pvt) Ltd, producent av våra kläder och dotterbolag till Tailor Store Sweden AB, är sedan juni 2010 certifierad enligt GOTS av Control Unions Certifications med adress P.O. Box 161, 8000 AD Zwolle, Nederländerna. Licensnumret är CU 814918. GOTS (Global Organic Textile Standards) är en internationell standard för framställning av textilier i ekologiskt odlade fibrer och den omfattar såväl ekologiska som sociala krav. Standarden verifieras genom oberoende certifiering av hela produktionskedjan från odlare till tillverkare av färdigt plagg.</p>
+                        <p id="Tailor-Store-paragraf"></p>
                     </div>
                 </div>
                 <div class="col-xs-6">

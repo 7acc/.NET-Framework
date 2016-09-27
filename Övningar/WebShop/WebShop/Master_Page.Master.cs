@@ -13,5 +13,12 @@ namespace WebShop
         {
 
         }
+        public void Category_onclick(object sender, EventArgs e)
+        {
+            LinkButton btn = (LinkButton)sender;
+            var category = btn.ID;
+            Session["SelectedCat"] = category.Remove(0, 3);
+            Response.Redirect("Categories.aspx");
+        }
     }
 }
