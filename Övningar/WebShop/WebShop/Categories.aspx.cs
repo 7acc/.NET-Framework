@@ -10,29 +10,27 @@ namespace WebShop
 {
     public partial class Categories : System.Web.UI.Page
     {
-       
         protected void Page_Load(object sender, EventArgs e)
         {
-            DAL_Products DB = new DAL_Products();
+            DAL_article DB = new DAL_article();
             string cat = (string)Session["SelectedCat"];
+            var DT = DB.GetArticleById(cat);
+            var products = Article.GetListOfArticles(DT);
+            Session["currentCat"] = products;
 
-            var DT = DB.GetProductsByCategory(cat);
-            var products = Product.GetListOfProducts(DT);
-            var list = ProductContainer.EncapsulateProducts(products);           
-            content.Add(list);         
-        }
+            var list = ProductContainer.EncapsulateProducts(products);
+            content.Add(list);
+        }   
 
         public void Product_OnClick(object sender, EventArgs e)
         {
-            var btn = (Button) sender;
-            Session["SelectedProduct"] = btn.ID.ToString();
+            var btn = (Button)sender;
+            var article = (List<Article>)Session["CurrentCat"];
+            Session["SelectedProduct"] = article.Find(x => x.ArticleID.ToString() == btn.ID.ToString().Substring(3));
+            Server.Transfer("ProductDetails.aspx", true);
 
 
         }
 
-        public void Test(string id)
-        {
-           
-        }
     }
 }

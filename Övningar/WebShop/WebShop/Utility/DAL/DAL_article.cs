@@ -11,10 +11,18 @@ namespace WebShop
     {
         public DataTable GetArticleById(string id)
         {
-            
-            OpenConnection(ConnectionString);
-            string sql = /*$"SELECT * From Product WHERE CategoryID = '{ID}'";*/$"SELECT * FROM Article WHERE ProductID = '{id}' GROUP BY size";
 
+            OpenConnection(ConnectionString);
+            string sql = "SELECT ArticleID, Article.ProductID, ProductName, BrandName, Color, BigPicture, ThumbNail, Description, CategoryName, S,M,L " +
+                      "FROM Article " +
+                         "JOIN Product ON Article.ProductID = Product.ProductID " +
+                         "JOIN Brand ON Product.BrandID = Brand.BrandID " +
+                         "JOIN Images ON Article.ImageSetID = Images.ImageSetID " +
+                         "JOIN Category ON Product.CategoryID = Category.CategoryID " +
+                    "JOIN Colors ON Article.ColorID = Colors.ColorID " +
+                    "left Outer JOIN Size On Article.SizeID = Size.SizeID "+
+                    $"WHERE Product.CategoryID ='{id}'";
+                 
 
             using (SqlDataAdapter dataAdapter = new SqlDataAdapter(sql, Connection))
             {
@@ -24,5 +32,6 @@ namespace WebShop
                 return data;
 
             }
+        }
     }
 }

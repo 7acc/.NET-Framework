@@ -17,7 +17,7 @@ namespace WebShop
         {
             LinkButton btn = (LinkButton)sender;
             var category = btn.ID;
-            Session["SelectedCat"] = category.Remove(0, 3);
+            Session["SelectedCat"] = category.Substring(3);
             Response.Redirect("Categories.aspx");
         }
     }

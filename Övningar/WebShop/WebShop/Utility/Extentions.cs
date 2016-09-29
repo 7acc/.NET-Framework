@@ -20,5 +20,12 @@ namespace WebShop
                 container.Controls.Add(item);
             }
         }
+
+        public static string ConvertToURL(this byte[] array)
+        {
+            string base64String = Convert.ToBase64String(array, 0, array.Length);
+            string url = "data:image/jpg;base64," + base64String;
+            return url;
+        }
     }
 }

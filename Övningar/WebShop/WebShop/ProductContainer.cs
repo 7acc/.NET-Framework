@@ -43,18 +43,17 @@ namespace WebShop
 
       
 
-        public static List<HtmlGenericControl> EncapsulateProducts(List<Product> products)
+        public static List<HtmlGenericControl> EncapsulateProducts(List<Article> products)
         {
             List<HtmlGenericControl> list = new List<HtmlGenericControl>();
             foreach (var product in products)
             {
                 var controls = new ProductContainer(
-                    product.ProductIMG,
+                    product.BigPicture,
                     product.Name,
-                    product.Description,
-                   "cat" + product.ID.ToString()
-                   );
-
+                    "Testdescription",
+                   "cat" + product.ArticleID.ToString()
+                   );              
                 var container = Encapsulate(controls);
                 list.Add(container);
             }
@@ -63,8 +62,8 @@ namespace WebShop
         private static HtmlGenericControl Encapsulate(ProductContainer temp)
         {
             HtmlGenericControl container = new HtmlGenericControl();
-            container.Attributes.Add("class", "cContainer");
-            container.ID = temp.TitleLabel.Text;
+            
+            container.Attributes.Add("class", "cContainer");  
             container.Controls.Add(temp.TitleLabel);
             container.Controls.Add(temp.Image);
             container.Controls.Add(temp.Description);
