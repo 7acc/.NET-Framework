@@ -95,6 +95,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\ProductContainer.css" />
+    <Content Include="Content\ProductDetails.css" />
     <Content Include="Index.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
@@ -135,12 +136,15 @@
     <Content Include="scripts\bootstrap.min.js" />
     <Content Include="scripts\jquery-1.9.1.js" />
     <Content Include="scripts\jquery-1.9.1.min.js" />
+    <Content Include="ShoppingCart.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Article.cs" />
+    <Compile Include="Cart.cs" />
+    <Compile Include="CartItem.cs" />
     <Compile Include="Categories.aspx.cs">
       <DependentUpon>Categories.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -177,10 +181,19 @@
       <DependentUpon>ProductDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShoppingCart.aspx.cs">
+      <DependentUpon>ShoppingCart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShoppingCart.aspx.designer.cs">
+      <DependentUpon>ShoppingCart.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Utility\DAL\DAL.cs" />
     <Compile Include="Utility\DAL\DAL_article.cs" />
+    <Compile Include="Utility\DAL\DAL_Cart.cs" />
     <Compile Include="Utility\DAL\DAL_Products.cs" />
     <Compile Include="Utility\Extentions.cs" />
+    <Compile Include="Utility\ShoppingCartHandler.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

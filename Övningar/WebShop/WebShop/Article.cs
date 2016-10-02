@@ -15,6 +15,7 @@ namespace WebShop
         public int ProductID { get; set; }
         public string Name { get; set; }
         public string Brand { get; set; }
+        public decimal Price { get; set; }
         public string Color { get; set; }
         public string BigPicture { get; set; }
         public string ThumbNail { get; set; }
@@ -43,6 +44,7 @@ namespace WebShop
                     Name = (string)DT.Rows[i]["ProductName"],
                     Brand = (string)DT.Rows[i]["BrandName"],
                     Color = (string)DT.Rows[i]["Color"],
+                    Price = (decimal)DT.Rows[i]["Price"],
                     BigPicture = ((byte[])DT.Rows[i]["BigPicture"]).ConvertToURL(),
                     ThumbNail = ((byte[])DT.Rows[i]["ThumbNail"]).ConvertToURL(),
                     Category = (string)DT.Rows[i]["CategoryName"],

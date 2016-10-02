@@ -4,6 +4,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
+using System.Web.UI.WebControls;
 
 namespace WebShop
 {
@@ -13,7 +14,7 @@ namespace WebShop
         {
 
             OpenConnection(ConnectionString);
-            string sql = "SELECT ArticleID, Article.ProductID, ProductName, BrandName, Color, BigPicture, ThumbNail, Description, CategoryName, S,M,L " +
+            string sql = "SELECT ArticleID, Article.ProductID, ProductName,Price, BrandName, Color, BigPicture, ThumbNail, Description, CategoryName, S,M,L " +
                       "FROM Article " +
                          "JOIN Product ON Article.ProductID = Product.ProductID " +
                          "JOIN Brand ON Product.BrandID = Brand.BrandID " +
@@ -32,6 +33,19 @@ namespace WebShop
                 return data;
 
             }
+        }
+
+        public void Update_InStore(int sizeId, string size, int amount)
+        {
+            OpenConnection(ConnectionString);
+            string sql = "";
+
+            using (SqlCommand cmd = new SqlCommand(sql, Connection))
+            {
+                
+            }
+
+
         }
     }
 }
