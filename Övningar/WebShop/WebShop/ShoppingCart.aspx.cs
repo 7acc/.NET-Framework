@@ -14,22 +14,12 @@ namespace WebShop
         protected void Page_Load(object sender, EventArgs e)
         {
             var cart = (Cart)Session["Cart"];
-            list = cart.cart;
-            CartGrid.DataSource = list;
-            CartGrid.DataBind();
 
-
+            cartDiv.Controls.Add(cart.GetCart());
+            TotalPrice.InnerText = "Total Price: " + cart.GetTotalPrice().ToString() + " kr";
         }
 
-        protected void CartGrid_OnRowDataBound(object sender, GridViewRowEventArgs e)
-        {
-            for (int i = 0; i < CartGrid.Rows.Count; i++)
-            {
-                Image Thumb = CartGrid.Rows[i].FindControl("img") as Image;
-                Thumb.ImageUrl = list[i].ThumbNail;
-                Thumb.AlternateText = "im here";
 
-            }
-        }     
+          
     }
 }

@@ -21,6 +21,7 @@ namespace WebShop
 
         public string Color { get; set; }   
         public string Size { get; set; }
+        public int inStore { get; set; }
 
         public CartItem(Article article, string size)
         {
@@ -33,6 +34,7 @@ namespace WebShop
             this.Price = article.Price;
             this.Color = article.Color;
             this.Size = size;
+            this.inStore = article.Sizes[size];
 
             this.Quantity = 1;
         }
@@ -46,6 +48,7 @@ namespace WebShop
             this.Price = article.Price;
             this.Color = article.Color;
             this.Size = size;
+            this.inStore = article.Sizes[size];
 
             this.Quantity = quantity;
         }

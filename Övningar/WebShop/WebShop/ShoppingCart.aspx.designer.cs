@@ -13,12 +13,30 @@ namespace WebShop {
     public partial class ShoppingCart {
         
         /// <summary>
-        /// CartGrid control.
+        /// cartDiv control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView CartGrid;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl cartDiv;
+        
+        /// <summary>
+        /// TotalPrice control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl TotalPrice;
+        
+        /// <summary>
+        /// ToCart control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ToCart;
     }
 }

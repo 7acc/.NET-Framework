@@ -21,15 +21,14 @@ namespace WebShop
             list = Session["currentCat"] as List<Article>;
 
             selected = Session["SelectedProduct"] as Article;
-            if (articles == null)
-            {
+           
                 articles = list.Where(item => item.ProductID == selected.ProductID).ToList();
-            }
-            BuildColorPickers(colors, articles, selected);
+            
 
+            BuildColorPickers(colors, articles, selected);
             if (!Page.IsPostBack)
             {
-
+            
                 ShowArticle(selected);
             }
         }

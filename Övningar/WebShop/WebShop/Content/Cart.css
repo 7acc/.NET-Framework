@@ -1,0 +1,55 @@
+﻿#CartContainer {
+    
+}
+#cartH1{
+    text-align: center;
+    margin-bottom:10px;
+}
+.Name{
+    position:absolute;
+    left:140px;
+    
+}
+.rowPrice{
+  padding-left:100px;
+  
+  
+}
+.ddl{
+   margin-left:10px;
+   margin-right:100px;
+}
+.Rowcontainer {
+   
+    display:flex;
+    flex-flow:row;
+    
+    width: 600px;
+    align-items: center;
+    margin-bottom: 5px;
+    margin-left: 40px;
+    border-bottom: solid;
+    
+}
+
+.RemoveButton {
+    position:absolute;
+    right:130px;
+    height: 30px;
+    color:red;
+    border-radius:60px;
+    
+   
+}
+
+.CartThumb {
+    height: 60px;
+}
+
+.CartRow {
+    width: 800px;
+}
+
+#TotalPrice{
+   
+}

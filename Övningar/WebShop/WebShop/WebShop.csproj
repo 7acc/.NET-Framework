@@ -94,6 +94,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Cart.css" />
     <Content Include="Content\ProductContainer.css" />
     <Content Include="Content\ProductDetails.css" />
     <Content Include="Index.aspx" />

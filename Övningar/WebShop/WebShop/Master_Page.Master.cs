@@ -11,7 +11,7 @@ namespace WebShop
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            CartUpdate();
         }
         public void Category_onclick(object sender, EventArgs e)
         {
@@ -19,6 +19,20 @@ namespace WebShop
             var category = btn.ID;
             Session["SelectedCat"] = category.Substring(3);
             Response.Redirect("Categories.aspx");
+        }
+
+        public void CartUpdate()
+        {
+            var cart = (Cart)Session["Cart"];
+            if (cart != null)
+            {
+                cartCount.Text = cart.cart.Count().ToString();
+                cartTotal.Text = cart.GetTotalPrice().ToString();
+            }
+            else
+            {
+                cartCount.Text = "0";
+            }
         }
     }
 }
