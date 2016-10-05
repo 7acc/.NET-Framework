@@ -12,10 +12,17 @@ namespace WebShop
         protected void Page_PreRender(object sender, EventArgs e)
         {
             CartUpdate();
+            Cart cart = (Cart)Session["Cart"];
+            if (cart != null)
+            {
+                cart.GetCart();
+                Session["Cart"] = cart;
+            }
         }
         protected void Page_Load(object sender, EventArgs e)
         {
-           
+            
+
         }
         public void Category_onclick(object sender, EventArgs e)
         {

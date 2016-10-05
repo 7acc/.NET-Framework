@@ -98,6 +98,7 @@
     <Content Include="Content\ProductContainer.css" />
     <Content Include="Content\ProductDetails.css" />
     <Content Include="Index.aspx" />
+    <Content Include="Kassan.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -144,7 +145,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Article.cs" />
-    <Compile Include="Cart.cs" />
+    <Compile Include="Cart.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="CartItem.cs" />
     <Compile Include="Categories.aspx.cs">
       <DependentUpon>Categories.aspx</DependentUpon>
@@ -162,6 +165,13 @@
     </Compile>
     <Compile Include="Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Kassan.aspx.cs">
+      <DependentUpon>Kassan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Kassan.aspx.designer.cs">
+      <DependentUpon>Kassan.aspx</DependentUpon>
     </Compile>
     <Compile Include="Master_Page.Master.cs">
       <DependentUpon>Master_Page.Master</DependentUpon>

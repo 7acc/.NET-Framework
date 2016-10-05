@@ -15,7 +15,7 @@
             </div>  
          
             <div class="col-md-2"> 
-                  <asp:Button ID="ToCart" runat="server" Text="Till Kassan" />
+                  <asp:Button ID="ToCart" runat="server" Text="Till Kassan" OnClick="ToCart_Click" />
 
             </div>
         </div>

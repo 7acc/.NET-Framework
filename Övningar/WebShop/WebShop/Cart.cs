@@ -12,15 +12,24 @@ using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 namespace WebShop
 {
-    public class Cart
+    public class Cart : Page
     {
         public List<CartItem> cart { get; set; }
         public HtmlGenericControl CartDiv { get; set; }
+        public Label CartEmpty;
 
 
         public Cart()
         {
             cart = new List<CartItem>();
+            CartEmpty = new Label
+            {
+                Text = "Your cart Is Empty! \n Get Shopping",
+                CssClass = "cEmpty",
+                
+
+
+            };
         }
 
         public void BuildCart()
@@ -86,11 +95,16 @@ namespace WebShop
             {
                 Text = "X",
                 ID = item.Size + item.ArticleID.ToString(),
-                CssClass = "RemoveButton"
+                CssClass = "RemoveButton",
+                PostBackUrl = "ShoppingCart.aspx"
+               
+                
                 
                 
             };
+            removebutton.Attributes.Add("runat", "server");        
             removebutton.Click += new System.EventHandler(Remove_ItemOnClick);
+            removebutton.OnClientClick = "return __doPostback();";
 
             itemContainer.Controls.Add(thumb);
             itemContainer.Controls.Add(name);
@@ -108,13 +122,7 @@ namespace WebShop
 
             return CartDiv;
         }
-        public void Remove_ItemOnClick(object sender, EventArgs e)
-        {
-            
-            Button btn = (Button)sender;          
-            cart.Remove(cart.Where(x => x.ArticleID.ToString() == btn.ID.Substring(1)).FirstOrDefault());
-            
-        }
+        
         public void AddItem(Article article, string size, int quantity)
         {
 
@@ -145,9 +153,17 @@ namespace WebShop
             item.Quantity = int.Parse(ddl.SelectedValue);
             
         }
+        public void Remove_ItemOnClick(object sender, EventArgs e)
+        {
+            
+            Button btn = (Button)sender;
+           cart.Remove(cart.Where(x => x.ArticleID.ToString() == btn.ID.Substring(1)).FirstOrDefault());
+           
+            
+        }
 
 
-        
+
 
 
     }

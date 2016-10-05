@@ -1,45 +1,41 @@
 ﻿#CartContainer {
-    
 }
-#cartH1{
+
+#cartH1 {
     text-align: center;
-    margin-bottom:10px;
+    margin-bottom: 10px;
 }
-.Name{
-    position:absolute;
-    left:140px;
-    
+
+.Name {
+    position: absolute;
+    left: 140px;
 }
-.rowPrice{
-  padding-left:100px;
-  
-  
+
+.rowPrice {
+    padding-left: 100px;
 }
-.ddl{
-   margin-left:10px;
-   margin-right:100px;
+
+.ddl {
+    margin-left: 10px;
+    margin-right: 100px;
 }
+
 .Rowcontainer {
-   
-    display:flex;
-    flex-flow:row;
-    
+    display: flex;
+    flex-flow: row;
     width: 600px;
     align-items: center;
     margin-bottom: 5px;
     margin-left: 40px;
     border-bottom: solid;
-    
 }
 
 .RemoveButton {
-    position:absolute;
-    right:130px;
+    position: absolute;
+    right: 130px;
     height: 30px;
-    color:red;
-    border-radius:60px;
-    
-   
+    color: red;
+    border-radius: 60px;
 }
 
 .CartThumb {
@@ -50,6 +46,11 @@
     width: 800px;
 }
 
-#TotalPrice{
-   
+#TotalPrice {
+}
+
+.cEmpty {
+    padding-top: 600px;
+    font-size: 30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
