@@ -62,7 +62,15 @@ namespace WebShop
             {
                 Quantity.Items.Add(i.ToString());
             }
-            Quantity.Items.FindByValue(item.Quantity.ToString()).Selected = true;
+            if (item.Quantity > item.inStore)
+            {
+                item.Quantity = item.inStore;
+                Quantity.Items.FindByValue(item.Quantity.ToString()).Selected = true;
+            }
+                Quantity.Items.FindByValue(item.Quantity.ToString()).Selected = true;
+            
+          
+            
             Quantity.SelectedIndexChanged += new System.EventHandler(Quantity_IndexChanged);
             Quantity.ID = "D" + item.Size + item.ArticleID.ToString();
             Quantity.AutoPostBack = true;

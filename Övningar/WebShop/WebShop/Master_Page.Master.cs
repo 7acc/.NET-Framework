@@ -9,9 +9,13 @@ namespace WebShop
 {
     public partial class Master_Page : System.Web.UI.MasterPage
     {
-        protected void Page_Load(object sender, EventArgs e)
+        protected void Page_PreRender(object sender, EventArgs e)
         {
             CartUpdate();
+        }
+        protected void Page_Load(object sender, EventArgs e)
+        {
+           
         }
         public void Category_onclick(object sender, EventArgs e)
         {
