@@ -53,7 +53,7 @@
                     <div class="voffset20"></div>
                     <div class="navbar-collapse collapse">
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a href="#">Logga in</a></li>
+                            <li><a href="CustomerLogin.aspx">Logga in</a></li>
                             <li>
                                 <a href="ShoppingCart.aspx">
                                     <span>Varukorg
@@ -102,35 +102,13 @@
             <div class="row">
                 <div class="col-xs-6">
                     <div class="content-heading clearfix media">
-                        <h4>Om Jaccs fancy and dandy clothes</h4>
-                        <img class="pull-left" src="Images/Textile.png" alt="" />
-                        <p id="Tailor-Store-paragraf"></p>
+                        <h4>Om Jaccs fancy and dandy clothes</h4>                            
                     </div>
                 </div>
                 <div class="col-xs-6">
-                    <h4>Kundtjänst</h4>
-                    <img src="Images/Trygg.jpg" alt="" />
+                    <h4>Kundtjänst</h4>               
                 </div>
-            </div>
-            <div class="row">
-                <div class="voffset10">
-                    <div class="col-xs-12">
-                        <div class="c-24 mlt checkout_partners">
-                            <span class="visa"></span>
-                            <span class="mastercard"></span>
-                            <span class="paypal"></span>
-                            <span class="klarna"></span>
-                            <span class="divider"></span>
-                            <span class="nordea"></span>
-                            <span class="handelsbanken"></span>
-                            <span class="swedbank"></span>
-                            <span class="seb"></span>
-                            <span class="divider"></span>
-                            <span class="bankgirot"></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            </div>     
             <p class="pull-right"><a href="#">Back to top</a></p>
             <p class="text-center">&copy; Grupp Arbete - Win15 2016</p>
         </div>

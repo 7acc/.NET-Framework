@@ -94,9 +94,14 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\animate.css" />
     <Content Include="Content\Cart.css" />
     <Content Include="Content\ProductContainer.css" />
     <Content Include="Content\ProductDetails.css" />
+    <Content Include="Content\script.sql" />
+    <Content Include="Content\style.css" />
+    <Content Include="CustomerLogin.aspx" />
+    <Content Include="CustomerRegister.aspx" />
     <Content Include="Index.aspx" />
     <Content Include="Kassan.aspx" />
     <Content Include="packages.config" />
@@ -138,6 +143,7 @@
     <Content Include="scripts\bootstrap.min.js" />
     <Content Include="scripts\jquery-1.9.1.js" />
     <Content Include="scripts\jquery-1.9.1.min.js" />
+    <Content Include="scripts\script.sql" />
     <Content Include="ShoppingCart.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -156,6 +162,22 @@
     <Compile Include="Categories.aspx.designer.cs">
       <DependentUpon>Categories.aspx</DependentUpon>
     </Compile>
+    <Compile Include="CustomerLogin.aspx.cs">
+      <DependentUpon>CustomerLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerLogin.aspx.designer.cs">
+      <DependentUpon>CustomerLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerRegister.aspx.cs">
+      <DependentUpon>CustomerRegister.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerRegister.aspx.designer.cs">
+      <DependentUpon>CustomerRegister.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess.cs" />
+    <Compile Include="Ecom_v2Cart.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

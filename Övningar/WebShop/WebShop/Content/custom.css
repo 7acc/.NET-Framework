@@ -1,6 +1,10 @@
 ﻿
 /* Vertical Spacing */
-.voffset5 {margin-top: 5px;}
+.voffset-50 {margin-top: -50px;}
+.voffset-40 {margin-top: -40px;}
+.voffset-30 {margin-top: -30px;}
+.voffset-20 {margin-top: -20px;}
+.voffset-10 {margin-top: -10px;}
 .voffset10 {margin-top: 10px;}
 .voffset20 {margin-top: 20px;}
 .voffset30 {margin-top: 30px;}
@@ -11,11 +15,6 @@
 .voffset80 {margin-top: 80px;}
 .voffset90 {margin-top: 90px;}
 .voffset100 {margin-top: 100px;}
-.voffset110 {margin-top: 110px;}
-.voffset120 {margin-top: 120px;}
-.voffset130 {margin-top: 130px;}
-.voffset140 {margin-top: 140px;}
-.voffset150 {margin-top: 150px;}
 
 /* ---------------------------------------------------------------------------------- */
 /* HEADER SECTION */
@@ -58,126 +57,36 @@
 }
 
 /* ---------------------------------------------------------------------------------- */
-.filters {
-    padding: 5px 15px;
+.product-name {
     text-align: center;
 }
-
-.filters .filter {
-    display: inline-block;
-    border-right: 1px solid #e3e3e3;
-    padding: 0 1em;
-}
-
-.filters .filter:last-of-type {
-    border-right: none;
-}
-
-.filters .filter ul {
-    margin-top: 0.5em;
-}
-
-.filters .filter ul li, .filters .sorting ul li {
-    display: inline-block;
-}
-
-.filters .filter.icon ul li a {
-    border-radius: 20px;
-    display: inline-block;
-    margin-right: 0;
-    width: 40px;
-    height: 40px;
-    text-decoration: none;
-    font-weight: 700;
+.price {
     text-align: center;
-}
-
-.filters .filter.color ul li .value {
-    display: none;
-}
-
-.filters .filter.icon ul li a > span {
-    display: inline-block;
-    margin-top: 8px;
+    font-weight: bold;
 }
 
 /* ---------------------------------------------------------------------------------- */
-.filters .filter.color ul li.white a {
-    background-color: white;
-    color: black;
-    border: 1px solid #e3e3e3;
+#map {
+    width: 100%; height: 400px;
 }
 
-.filters .filter.color ul li.green a {
-    background-color: #295731;
-    color: white;
+.info-window {
+    font-family: 'Montserrat', sans-serif;
 }
-
-.filters .filter.color ul li.blue a {
-    background-color: #384c75;
-    color: white;
-}
-
-.filters .filter.color ul li.black a {
-    background-color: black;
-    color: white;
-}
-
-.filters .filter.color ul li.red a {
-    background-color: #8c241f;
-    color: white;
-}
-
-.filters .filter.color ul li.gray a {
-    background-color: #555;
-    color: white;
-}
-
-.filters .filter.color ul li.orange a {
-    background-color: #e4783f;
-    color: black;
-}
-
-.filters .filter.color ul li.purple a {
-    background-color: #443050;
-    color: white;
-}
-
-.filters .filter.color ul li.pink a {
-    background-color: #e9aacb;
-    color: white;
-}
-
-.filters .filter.color ul li.brown a {
-    background-color: #534033;
-    color: white;
+.info-content {
+    color: #999;
 }
 
 /* ---------------------------------------------------------------------------------- */
-    .filters .filter.pattern ul li.solid a {
-        background-image: url('../Images/solid.jpg');
-        background-size: 40px 40px;
-    }
+.contact-form-group {
+    /*margin-bottom: 50px !important;*/
+    height: 50px;
+}
 
-    .filters .filter.pattern ul li.striped a {
-        background-image: url('../Images/striped.jpg');
-        background-size: 40px 40px;
-    }
-
-    .filters .filter.pattern ul li.checked a {
-        background-image: url('../Images/checked.jpg');
-        background-size: 40px 40px;
-    }
-
-    .filters .filter.pattern ul li.dotted a {
-        background-image: url('../Images/dotted.jpg');
-        background-size: 40px 40px;
-    }
-
-    .filters .filter.pattern ul li.printed a {
-        background-image: url('../Images/printed.jpg');
-        background-size: 40px 40px;
-    }
+.bigicon {
+        font-size: 20px;
+        color: #36A0FF;
+}
 
 /* ---------------------------------------------------------------------------------- */
 /* FOOTER SECTION */
@@ -190,7 +99,7 @@ footer h4 {
 }
 
     .checkout_partners span {
-        background-image: url('../Images/Partners.png');
+        background-image: url('../Images/Master/Partners.png');
         display: inline-block;
         margin: 7px 3px;
         height: 23px;
@@ -250,12 +159,24 @@ footer h4 {
     margin-top: 1em;
 }
 
+.c-12{
+    position: relative;
+    float: left;
+    width: 50%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
 .c-24 {
     position: relative;
     float: left;
     width: 100%;
     padding-left: 15px;
     padding-right: 15px;
+}
+
+ul {
+    list-style: none;
 }
 
 #Tailor-Store-paragraf {

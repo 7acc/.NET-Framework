@@ -8,24 +8,21 @@ namespace Samlingsklasser
 {
     class Queue
     {
-        public static Queue<Student> studentQueue;
+        public static Queue<Student> StudentQueue;
 
         public static void Run()
         {
-            studentQueue = new Queue<Student>();
-            studentQueue.Enqueue(new Student("Tom Sawyer", 9));
-            studentQueue.Enqueue(new Student("Hucleberry Fin", 6));
-            studentQueue.Enqueue(new Student("Elton John", 0));
+            StudentQueue = new Queue<Student>();
+            StudentQueue.Enqueue(new Student("Tom Sawyer", 9));
+            StudentQueue.Enqueue(new Student("Hucleberry Fin", 6));
+            StudentQueue.Enqueue(new Student("Elton John", 0));
 
-            while (studentQueue.Count > 0)
+            while (StudentQueue.Count > 0)
             {
-                Congratulate(studentQueue.Dequeue()); 
-            }
-            
-            Console.ReadKey();
-          
-        }
-
+                Congratulate(StudentQueue.Dequeue()); 
+            }           
+            Console.ReadKey();         
+        } 
 
         public static void Congratulate(Student student)
         {
