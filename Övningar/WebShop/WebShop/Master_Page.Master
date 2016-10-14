@@ -42,7 +42,7 @@
                     <div class="voffset20"></div>
                     <div class="navbar-collapse collapse">
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a href="#">Logga in</a></li>
+                            <li><a href="CustomerLogin.aspx">Logga in</a></li>
                             <li>
                                 <a href="ShoppingCart.aspx">
                                     <span>Varukorg
@@ -91,16 +91,17 @@
             <div class="row">
                 <div class="col-xs-6">
                     <div class="content-heading clearfix media">
-                        <h4>Om Jaccs fancy and dandy clothes</h4>
-                        <img class="pull-left" src="Images/Textile.png" alt="" />
-                        <p id="Tailor-Store-paragraf"></p>
+                        <h4>Om Jaccs fancy and dandy clothes</h4>                            
                     </div>
                 </div>
                 <div class="col-xs-6">
-                    <h4>Kundtjänst</h4>
-                    <img src="Images/Trygg.jpg" alt="" />
+                    <h4>Kundtjänst</h4>               
                 </div>
+<<<<<<< HEAD
             </div>          
+=======
+            </div>     
+>>>>>>> 83aaed8f9c8ce8162c2ea1783d77d58e49e99311
             <p class="pull-right"><a href="#">Back to top</a></p>
             <p class="text-center">&copy; Grupp Arbete - Win15 2016</p>
         </div>

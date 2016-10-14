@@ -50,6 +50,8 @@ namespace WebShop
        
         protected void Page_Load(object sender, EventArgs e)
         {
+            if(!Page.IsPostBack)
+            { 
             cart = Session["cart"] as Cart;
             if (cart != null)
             {
@@ -66,11 +68,11 @@ namespace WebShop
 
             else
             {
-                Cart cart = new Cart();
+                Cart newCart = new Cart();
                 Session["Cart"] = cart;
-                cartDiv.Controls.Add(cart.CartEmpty);
+                cartDiv.Controls.Add(newCart.CartEmpty);
             }
-
+            }
 
         }
         protected void Page_UnLoad(object sender, EventArgs e)
