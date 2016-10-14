@@ -30,9 +30,11 @@ namespace WebShop
                 DataTable data = new DataTable();
                 dataAdapter.Fill(data);
 
+                CloseConnection(Connection);
                 return data;
-
-            }
+            };
+           
+            
         }
 
         public void Update_InStore(int sizeId, string size, int amount)
