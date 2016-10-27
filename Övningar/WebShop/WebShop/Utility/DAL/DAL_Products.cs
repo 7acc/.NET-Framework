@@ -22,6 +22,8 @@ namespace WebShop
                 dataAdapter.Fill(data);
 
                 return data;
+                
+               
 
             }
         }
