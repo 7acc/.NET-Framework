@@ -12,12 +12,10 @@ namespace _4._1___4._2___Seperation_Of_Concerns
         {
             return list.OrderBy(x => x.LastName).ToList();
         }
-
         public static List<Employee> OrderedByFirstName(this List<Employee> list)
         {
             return list.OrderBy(x => x.FirstName).ToList();
         }
-
         public static List<Employee> FromdeDepartment(this List<Employee> list, Employee.Departments department)
         {
             return list.Where(x => x.Department.ToString() == department.ToString()).ToList();
@@ -39,10 +37,8 @@ namespace _4._1___4._2___Seperation_Of_Concerns
         }
         public static void PrintList(this List<Employee> list)
         {
-            list.ForEach(x => Console.WriteLine(x));
+            list.ForEach(Console.WriteLine);
+          
         }
-
-
-
     }
 }
