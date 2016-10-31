@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace _4._3_EF_CRUD
 {
-    partial class UI
+    partial class Ui
     {
         private readonly string welcome = "-------------------------------------------\n" +
                                  "---------Auther Administrator 2000---------\n" +
@@ -18,31 +19,28 @@ namespace _4._3_EF_CRUD
                                   "(4) Update existing Author\n" +
                                   "(Q) Quit";
 
-        private readonly string findAuther = "(1) Find by ID\n" +
-                                    "(2) Find by Name\n" +
-                                    "(Q) Back";
-   
+        private readonly string findAutherMenu = "(1) Find by ID\n" +
+                                                 "(2) Find by Name\n" +
+                                                 "(Q) Back";
+
 
 
         public void ShowMenu()
         {
+            Console.Clear();
             Console.WriteLine(welcome + mainMenu);
         }
 
         public void ShowFindAuther()
         {
-            Console.WriteLine(welcome + findAuther);
+            Console.Clear();
+            Console.WriteLine(welcome + findAutherMenu);
         }
 
-        public void ShowAutherByNameMenu()
+        public void NotFound(string item)
         {
-            
-        }
-
-
-        public void NotFound(string Item)
-        {
-            Console.WriteLine($"{Item} could not found");
+            Console.WriteLine($"{item} could not found");
+            Console.ReadKey();
         }
 
         public void Found(int count)
@@ -60,6 +58,34 @@ namespace _4._3_EF_CRUD
         public void ErrorMessage(string message)
         {
             Console.WriteLine(message);
+            Console.ReadKey();
+        }
+
+        public void Print<T>(T t)
+        {
+            try
+            {
+                Console.WriteLine(t);
+                Console.ReadKey();
+            }
+            catch (ArgumentException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
+        }
+
+        public void PrintList<T>(List<T> list)
+        {
+            try
+            {
+
+                list.ForEach(x => Console.WriteLine(x));
+            }
+            catch (ArgumentException e)
+            {
+                Console.WriteLine(e.Message);
+            }
         }
 
     }

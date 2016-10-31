@@ -11,7 +11,7 @@ namespace _4._3_EF_CRUD
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append($"Name {FirstName} {LastName}\nPaymentmethod:  ({Titles.Count})\n\n");
+            sb.Append($"Author ID: {AuthorID}\nName {FirstName} {LastName}\nAge: {Age}\nPaymentmethod:  ({Titles.Count})\n\n");
             if (Titles.Count > 0)
             {
                 sb.Append("ISBN".PadRight(15) + "Title".PadRight(50) + "Copyroght\n\n");
@@ -27,5 +27,6 @@ namespace _4._3_EF_CRUD
             sb.Append("\n".PadRight(100, '.') + "\n");
             return sb.ToString();
         }
+       
     }
 }

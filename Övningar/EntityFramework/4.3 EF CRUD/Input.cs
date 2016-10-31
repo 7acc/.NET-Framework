@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace _4._3_EF_CRUD
 {
-    partial class UI
+    partial class Ui
     {
 
         public string NameInput()
@@ -39,7 +39,7 @@ namespace _4._3_EF_CRUD
             return fullname.Split(' ');
         }
 
-        public int intInput(string request)
+        public int SingleintInput(string request)
         {
             Console.Write(request);
             var input = Console.ReadKey(true).KeyChar.ToString();
@@ -51,12 +51,13 @@ namespace _4._3_EF_CRUD
             }
             else
             {
-                Console.WriteLine("incorrect user input");
+                Console.WriteLine("Incorrect User Input");
                 Console.ReadKey();
                 return -1;
             }
         }
-        public int intInput()
+
+        public int SingleintInput()
         {
             var input = Console.ReadKey(true).KeyChar.ToString();
             int outPut;
@@ -67,25 +68,44 @@ namespace _4._3_EF_CRUD
             }
             else
             {
-                Console.WriteLine("incorrect user input");
+                Console.WriteLine("Incorrect User Input");
                 Console.ReadKey();
                 return -1;
             }
-        }      
- 
+        }
+
+        public int MultiIntInput(string request)
+        {
+            Console.Write(request);
+            var input = Console.ReadLine();
+            int outPut;
+            bool isdigit = int.TryParse(input, out outPut);
+            if (isdigit)
+            {
+                return outPut;
+            }
+            else
+            {
+                Console.WriteLine("Incorrect User Input");
+                Console.ReadKey();
+                return -1;
+            }
+        }
+    
+
         public Authors NewAuthorInput()
         {
-            var Name = NameInput().Split(' ');
+            var name = NameInput().Split(' ');
             var age = -1;
             while (age > 0)
             {
-                age = intInput("Age: ");
+                age = SingleintInput("Age: ");
             }
 
             return new Authors
             {
-                FirstName = Name[0],
-                LastName = Name[1],
+                FirstName = name[0],
+                LastName = name[1],
                 Age = age
             };
 
@@ -155,8 +175,49 @@ namespace _4._3_EF_CRUD
             }
         }
 
+        public Authors ModifyAuthorInput(Authors authorToUpdate)
+        {
+            Authors BackupAuthor = authorToUpdate;
+            bool loop = true;
+            while (loop)
+            {
 
+                Console.Clear();
+                Console.WriteLine(authorToUpdate);
+                Console.WriteLine();
 
+                switch (UserNavigation("to update?", "try again ;)"))
+                {
+                    case 1:
+                        var Name = NameInput2();
+                        authorToUpdate.FirstName = Name[0];
+                        authorToUpdate.LastName = Name[1];
+                        break;
+                    case 2:
+                        int age = SingleintInput("Enter age: ");
+                        if (age > 0)
+                        {
+                            authorToUpdate.Age = age;
+                        }
+                        else
+                        {
+                            ErrorMessage("author need to be atleas 1 year old!");
+                        }
+                        break;
+                    case 3:
+                        return authorToUpdate;
 
+                    case -2:
+
+                        loop = false;
+                        return authorToUpdate = BackupAuthor;
+
+                }
+            }
+            return authorToUpdate;
+        }
     }
+
+
 }
+

@@ -1,27 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Sockets;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
 namespace _4._3_EF_CRUD
 {
-    class Application
+    internal class Application
     {
         private DataAccess DataAccess { get; set; }
-        private UI Ui { get; set; }
+
+        private Ui Ui { get; set; }
 
         public Application()
         {
-
-            Ui = new UI();
+            Ui = new Ui();
 
             DataAccess = new DataAccess();
         }
 
         public void Start()
-        {
+        {            
             Navigate();
         }
 
@@ -29,22 +30,22 @@ namespace _4._3_EF_CRUD
         {
             while (true)
             {
-                Console.Clear();
                 Ui.ShowMenu();
                 switch (Ui.UserNavigation(""))
                 {
                     case 1:
-                        DataAccess.GetAllAuthors().PrintList();
-                        Console.ReadKey();
+                        Ui.PrintList(DataAccess.GetAllAuthors());                            
                         break;
                     case 2:
-                        FindAuther();
+                        var foundAuthor = FindAuther();
+                        Ui.Print(foundAuthor.ToString());                    
                         break;
                     case 3:
                         DataAccess.AddAuthor(Ui.NewAuthorInput());
                         break;
                     case 4:
-                        UpdateAuthor();
+                        var foundAuthorToUpdate = FindAuther();
+                        UpdateAuthor(foundAuthorToUpdate);
                         break;
                     case -1:
                         break;
@@ -63,7 +64,7 @@ namespace _4._3_EF_CRUD
             bool loop = true;
             while (loop)
             {
-                Console.Clear();
+          
                 Ui.ShowFindAuther();
                 switch (Ui.UserNavigation())
                 {
@@ -77,12 +78,11 @@ namespace _4._3_EF_CRUD
                         if (authers.Count == 1)
                         {
                             author = authers[0];
-                            Console.ReadKey();
                         }
                         else if (authers.Count > 1)
                         {
                             authers.PrintList();
-                            Console.WriteLine("enter the ID of the author you want to Update");
+                            var select = Ui.MultiIntInput("Select Author By ID");
                         }
                         else
                         {
@@ -97,75 +97,46 @@ namespace _4._3_EF_CRUD
                             else if (authers.Count > 1)
                             {
                                 authers.PrintList();
-                                var select = Ui.intInput("enter the ID of the author you want to Update");
-                       
+                                var select = Ui.MultiIntInput("Select Author By ID");
+
                                 author = authers.GetAuthorByID(select);
-                                break;
                             }
                             else
                             {
                                 Ui.NotFound(name);
+                                break;
                             }
                         }
-
-                        break;
+                        loop = false;
+                        return author;
                     case -2:
                         loop = false;
                         break;
                 }
-
-            }
+            }           
             return author;
         }
 
-        private void UpdateAuthor()
+        private void UpdateAuthor(Authors authorToUpdate)
+        {
+            if (authorToUpdate != null)
+            {
+                var modifedauthor = Ui.ModifyAuthorInput(authorToUpdate);
+                DataAccess.UpDateAuthor(modifedauthor);
+            }
+        }
+
+        private void AddAuthor(Authors authorToAdd)
         {
             
-            var selected = FindAuther();            
-       
-            if (selected != null)
-            {           
-                UpdateAuthorInput(selected);
-            }
-          
-        }
+            if(authorToAdd != null)
+            DataAccess.AddAuthor(authorToAdd);
 
-        public void UpdateAuthorInput(Authors authorToUpdate)
-        {
-            bool loop = true;
-            while (loop)
+            else
             {
-                Console.Clear();
-                Console.WriteLine(authorToUpdate);
-                Console.WriteLine();
-
-                switch (Ui.UserNavigation("to update?", "try again ;)"))
-                {
-                    case 1:
-                        var Name = Ui.NameInput2();
-                        authorToUpdate.FirstName = Name[0];
-                        authorToUpdate.LastName = Name[1];
-                        break;
-                    case 2:
-                        int age = Ui.intInput("Enter age: ");
-                        if (age > 0)
-                        {
-                            authorToUpdate.Age = age;
-                        }
-                        else
-                        {
-                            Ui.ErrorMessage("author need to be atleas 1 year old!");
-                        }
-                        break;
-                    case 3:
-                        DataAccess.UpDateAuthor(authorToUpdate);
-                        Console.WriteLine("Saved");
-                        break;
-                    case -2:
-                        return;
-
-                }
+              Ui.ErrorMessage("Unable To Add Author");  
             }
         }
+
     }
 }
